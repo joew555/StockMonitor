@@ -25,14 +25,17 @@ for root, dirs, files in os.walk(path):
 #print("A random up song: " + random.choice(upSongFiles))
 #print("A random down song: " + random.choice(downSongFiles))
 
+#random iterates through a list randomly - do not need a for loop
 def up():
-    for upSong in upSongFiles:
-        playsound(removeSpaces(upSong))
+    playsound(removeSpaces(random.choice(upSongFiles)))
+    #for upSong in upSongFiles:
+        #playsound(removeSpaces(upSong))
 
 
 def down():
-    for downSong in downSongFiles:
-        playsound(removeSpaces(downSong))
+    playsound(removeSpaces(random.choice(downSongFiles)))
+    #for downSong in downSongFiles:
+        #playsound(removeSpaces(downSong))
 
 
 
