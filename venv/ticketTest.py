@@ -1,5 +1,6 @@
 import Music as ms
 import time as t
+import datetime as dt
 import stockPrompt as sp
 
 from yahoo_fin import stock_info as si
@@ -9,7 +10,7 @@ from yahoo_fin import stock_info as si
 stock = sp.stockName
 stockQuote = si.get_quote_table(stock)
 
-open = (round(stockQuote['Open'],2))
+open = (round(stockQuote['Open'], 2))
 
 def stockTrend():
 
@@ -22,7 +23,11 @@ def stockTrend():
     else:
         ms.down()
 
-stockTrend()
+#while loop uses modulus to run every 5 minutes
+while True:
+    if dt.datetime.now().minute % 2 == 0:
+        stockTrend()
+
 
 
 
