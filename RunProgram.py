@@ -12,6 +12,7 @@ def run_program():
         else:
 
             ms.down()
+            
     else:
 
         print("The Market is Closed")

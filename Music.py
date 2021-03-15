@@ -2,7 +2,7 @@ from playsound import playsound
 import os as os
 import random as random
 
-path = 'music/'
+path = 'venv/music/'
 
 def removeSpaces(string):
     return string.replace(" ", "%20")
